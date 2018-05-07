@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/closeback.png</file>
+        <file>Resources/minback.png</file>
+        <file>Resources/LoginWindow/login_title.png</file>
+        <file>Resources/delete_username.png</file>
+        <file>Resources/drop_down_Button.png</file>
+    </qresource>
+</RCC>

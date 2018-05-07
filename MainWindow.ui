@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>541</width>
+    <height>337</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButton_file_dialog">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>80</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border: 2px solid ; 
+border-color:rgb(100,190,245);
+
+font:  8pt;
+color:rgb(100,190,245);
+}
+
+
+QPushButton:hover {
+border: 2px solid ; 
+border-color:rgb(100,190,245);
+background-color:rgb(200 , 250 , 250);
+
+font:  8pt;
+color:rgb(100,190,245);
+}
+
+
+QPushButton:pressed {
+border: 2px solid ; 
+border-color:rgb(100,190,245);
+background-color:rgb(200 , 250 , 250);
+
+font:  8pt;
+color:rgb(100,190,245);
+padding-left:5px;
+padding-top:3px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_file_dialog">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>80</y>
+      <width>321</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_file_dialog">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>80</y>
+      <width>60</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>文件选择：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_mation">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>150</y>
+      <width>321</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>作业网址格式为http://cc.scu.edu.cn/G2S/StudentSpace/H
+omework/Dohomework2.aspx?WebID=4852&amp;ID=19613
+
+
+支持的文件格式：rar，zip，pdf，doc，xls，ppr，chm，
+hlp，pptx，docx，xlsx</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_url">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>50</y>
+      <width>60</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>作业网址：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_url">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>50</y>
+      <width>321</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_send">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>290</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border: 2px solid ; 
+border-radius: 8px; 
+border-color:rgb(100,190,245);
+
+font: bold 11pt;
+color:rgb(100,190,245);
+}
+
+
+QPushButton:hover {
+border: 2px solid ; 
+border-radius: 8px; 
+border-color:rgb(100,190,245);
+background-color:rgb(200 , 250 , 250);
+
+font: bold 11pt;
+color:rgb(100,190,245);
+}
+
+
+QPushButton:pressed {
+border: 2px solid ; 
+border-radius: 8px; 
+border-color:rgb(100,190,245);
+background-color:rgb(200 , 250 , 250);
+
+font: bold 11pt;
+color:rgb(100,190,245);
+padding-left:5px;
+padding-top:3px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>发送</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_new_file_name">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>110</y>
+      <width>321</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>此栏可以为空, 或者记得加上正确的文件后缀名</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_new_file_name">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>覆盖后文件名：</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
