@@ -10,7 +10,7 @@
 
 <p>&nbsp;</p>
 
-
+[![Watch the video](https://github.com/ExplosiveBattery/CoverHomework/blob/master/README/video_screenshot.png?raw=true)](https://youtu.be/egjo6LV1fLM)
 
 ### Announce
 虽然使用代码直接产生界面具有更好的性能，但是为了方便个人开发，界面使用Qt Designer制作的ui文件，配合QSS。
