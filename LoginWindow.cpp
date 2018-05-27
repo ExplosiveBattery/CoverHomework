@@ -11,7 +11,7 @@ LoginWindow::LoginWindow(QWidget *parent) :
     initSQL();
     ui->setupUi(this);
     m_usernameListWidget->setGeometry(0,0,0,0);
-    setWindowFlags(Qt::FramelessWindowHint|Qt::WindowStaysOnTopHint);
+    setWindowFlags(Qt::FramelessWindowHint);
     fillUsernameComboBox();
 }
 
@@ -127,7 +127,6 @@ void LoginWindow::on_pushButton_login_clicked()
     QString username =ui->comboBox_username->currentText();
     QString password =ui->lineEdit_password->text();
     if( !username.isEmpty() && !password.isEmpty() ) {
-
         m_networkSystem =new NetworkSystem(username, password);
         if( m_networkSystem->login() ){
             SQLErrorDetect(m_pQuery, "select * from Users where Username='"+username+"'", "用户名匹配超找失败");
@@ -138,6 +137,8 @@ void LoginWindow::on_pushButton_login_clicked()
             this->hide();
         }else {
             QMessageBox::warning(nullptr, "warning", "登录失败");
+            delete m_networkSystem;
+            m_networkSystem = nullptr;
         }
     }
 }

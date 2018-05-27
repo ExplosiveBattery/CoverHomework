@@ -35,7 +35,7 @@ void MainWindow::on_pushButton_send_clicked()
     }
     QString newFileName =ui->lineEdit_new_file_name->text();
     if(newFileName.isEmpty()) {
-        newFileName="homework."+oldFileName.split(".",QString::SkipEmptyParts).last();
+        newFileName=oldFileName.split("/",QString::SkipEmptyParts).last();
         ui->lineEdit_new_file_name->setText(newFileName);
     }
 

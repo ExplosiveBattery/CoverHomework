@@ -19,10 +19,11 @@ void NetworkSystem::setNewFileName(QString newFileName) {
     m_newFileName =newFileName;
 }
 
-
+//logout url: http://cc.scu.edu.cn/G2S/Showsystem/Logout.ashx?action=OutUserLoginInfo
 bool NetworkSystem::login() {
     m_request.setUrl(m_baseUrl+"/G2S/ShowSystem/Login.ashx");
     m_request.setHeader(QNetworkRequest::ContentTypeHeader,"application/x-www-form-urlencoded");
+//    m_request.setRawHeader(QByteArray("Referer"),QByteArray("http://cc.scu.edu.cn/G2S/ShowSystem/Index.aspx"));
     QByteArray data;
     data.append("LoginName="+m_username+
                 "&Password="+m_password+
@@ -35,7 +36,7 @@ bool NetworkSystem::login() {
     connect(pReply, SIGNAL(finished()), &loop, SLOT(quit()));
     loop.exec();
 
-    return pReply->error()==QNetworkReply::NoError;
+    return pReply->rawHeader(QByteArray("Cache-Control"))=="private";
 }
 
 bool NetworkSystem::upload() {
@@ -136,6 +137,7 @@ void NetworkSystem::recordUploadInfo(QString &str) {
 
 
 void NetworkSystem::recordNessaryInfo(QString &str) {
+    qDebug() << "into";
     m_homeworkID =findAll(str, "var HomeWorkID = \"(.*)\"", 1)[0];
     m_userID =findAll(str, "var UserID = \"(.*)\"", 1)[0];
 }
